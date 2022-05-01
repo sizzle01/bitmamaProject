@@ -1,16 +1,17 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Repositories from './repositories'
-import Tabs from './Tabs'
-import UserInfo from './UserInfo'
+import Navbar from './navbar/Navbar'
+import Repositories from './repos/Repositories'
+import Tabs from './tabs/Tabs'
+import UserInfo from './userinfo/UserInfo'
 
 const UserPage = () => {
   return (
-    <div>
-      <Navbar />
-      <UserInfo />
+    <div style={{ width: '80%' }}>
       <Tabs />
-      <Repositories />
+      <div style={{ display: 'flex' }}>
+        <UserInfo />
+        <Repositories />
+      </div>
     </div>
   )
 }

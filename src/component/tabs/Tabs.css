@@ -5,8 +5,15 @@
   color: #000;
   justify-content: center;
   align-items: center;
+ 
 }
 .nav-link {
   font-size: 14px;
   color: #586069;
+}
+.nav-item a {
+  color: #586069;  
+}
+.nav-item .fa {
+  color: #586069;  
 }

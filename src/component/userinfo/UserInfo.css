@@ -1,4 +1,9 @@
-.user-infos {
+.user{
+  background-color: red;
+  width: 30%;
+}
+.following {
+  width: 20%;
     padding-bottom: 15px;
     margin-bottom: 15px;
     display: flex;
@@ -10,12 +15,34 @@
   .user-info > img{
       border-radius: 50%;
       object-fit: contain;
-
+      border-bottom: 30px;
+  }
+  .name > h5{
+    color: #000000;
+    font-size: 24px;
+  }
+  .name > h3{
+    color: #686565;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .user-info {
+    margin-right: 10px;
+  }
+  .profile-button{
+    border: 1px solid;
+    border-radius: 6px;
+    width: 85%;
+    height: 33px;
+    margin-bottom: 30px;
   }
   .user_infoDetails{
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .item{
+
   }
   .user_infos {
     display: flex;
@@ -31,9 +58,7 @@ display: flex;
 align-items: center;
   }
 
-  .user_infoDetails > h5{
-    text-align: center;  
-  }
+ 
   .infos {
     display: flex;
     flex-direction: row;
@@ -48,4 +73,26 @@ align-items: center;
     display: flex;
     align-items: center;
   }
-  
+  .user_social-media{
+    margin-top: 30px;
+  }
+  .user_mediaDetail > .fa{
+    color: #5c5959;
+    
+  }
+  .separator{
+    background-color: #999797;
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .organizations{
+margin-top: 15px;
+  }
+  .head{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .organizations > img{
+ border-radius: 15px;
+  }

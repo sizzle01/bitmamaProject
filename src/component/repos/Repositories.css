@@ -4,6 +4,14 @@
   justify-content: space-between;
   margin-top: 20px;
 }
+.repository-wrapper{
+  width: 70%;
+}
+.repo-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 i {
   color: #6a6c6eb7;
 }
