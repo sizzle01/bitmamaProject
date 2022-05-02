@@ -13,7 +13,7 @@ const UserInfo = () => {
   const [user, setUser] = useState('sizzle01')
 
   useEffect(() => {
-    // dispatch(fetchProfileAction(user))
+    dispatch(fetchProfileAction(user))
   }, [dispatch])
 
   const store = useSelector((state) => state?.repos)
@@ -27,21 +27,15 @@ const UserInfo = () => {
         <h1>{error?.message}</h1>
       ) : (
         <div className="user">
-          <img
-            src="./1464612233592.jpg"
-            className="p-2 avatar"
-            width="130"
-            height="130"
-            alt="User"
-          />
+          <img src={profile?.avatar_url} className="p-2 avatar" alt="User" />
           <div className="user_infoDetails">
             <div className="name">
-              <h5>Murtala Aliyu Tunde</h5>
-              <h3>SIZZLE01</h3>
+              <h5>{profile?.name}</h5>
+              <h3>{profile?.login}</h3>
             </div>
             <button
               className="profile-button"
-              onclick="location.href='http://www.example.com'"
+              onclick="location.href='http://www.google.com'"
               type="button"
             >
               Edit Profile
@@ -50,13 +44,15 @@ const UserInfo = () => {
               <div className="user_info">
                 <div className="user_infoDetails">
                   <i className="fa fa-group">
-                    <span className="item"> Follower .</span>
+                    <span className="item">
+                      {profile?.followers} Follower .
+                    </span>
                   </i>
                 </div>
               </div>
               <div className="user_info">
                 <div className="user_infoDetails">
-                  <span className="item">following .</span>
+                  <span className="item">{profile?.following} following .</span>
                 </div>
               </div>
             </div>
@@ -66,14 +62,21 @@ const UserInfo = () => {
             <div className="user_media">
               <div className="user_mediaDetail">
                 <i className="fa fa-map-marker pr-1">
-                  <span className="item"> Lagos .</span>
+                  <span className="item">{profile?.location} .</span>
+                </i>
+              </div>
+            </div>
+            <div className="user_media">
+              <div className="user_mediaDetail">
+                <i class="fa fa-brands fa-twitter">
+                  <span className="item">{profile?.twitter_username} </span>
                 </i>
               </div>
             </div>
             <div className="user_media">
               <div className="user_mediaDetail">
                 <i className="fa fa-envelope pr-1">
-                  <span className="item">Email .</span>
+                  <span className="item">{profile?.email} </span>
                 </i>
               </div>
             </div>
@@ -81,13 +84,6 @@ const UserInfo = () => {
           <div className="separator"></div>
           <div className="organizations">
             <p className="head">Organizations</p>
-            <img
-              src="./1464612233592.jpg"
-              className="p-2 avatar"
-              width="130"
-              height="130"
-              alt="User"
-            />
           </div>
         </div>
       )}

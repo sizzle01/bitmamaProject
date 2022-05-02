@@ -11,7 +11,7 @@ export const fetchReposAction = createAsyncThunk(
   async (user, { rejectWithValue, getState, dispatch }) => {
     try {
       const { data } = await axios.get(
-        `https://api.github.com/users/${user}/repos?per_page=700&sort=asc`,
+        `https://api.github.com/users/${user}/repos?per_page=20&sort=asc`,
       )
 
       return data

@@ -1,0 +1,18 @@
+.user-page{
+width: 85%;
+}
+.page-body{
+display: flex;
+}
+
+/* media queries */
+@media (max-width: 900px) { 
+.user-page{
+ width: 95%;
+}  
+}
+@media (max-width: 600px) { 
+ .page-body{
+  flex-direction: column;
+  } 
+    }
